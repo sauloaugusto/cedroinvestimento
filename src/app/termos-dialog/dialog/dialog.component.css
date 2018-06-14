@@ -1,0 +1,29 @@
+h1 { color: #640f2b }
+.container { text-align: center; width: 350px;}
+.material-icons { font-size: 15px; }
+
+.mat-raised-button {
+    width: 100%;
+    border: none;
+    margin: 0 10px;
+    background-color: #ffbb15;
+    color: #FFF;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none!important;
+}
+
+button:focus, button:hover {
+    background-color: #640f2b;
+    color: #FFF;
+}
+
+.divider{
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+.mat-icon-button{
+    margin-top: -5px!important;
+
+}

@@ -1,0 +1,80 @@
+<div class="container">
+      <h1>PERFIL DO INVESTIDOR -  QUESTIONÁRIO</h1>
+    <div class="row">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <h2 class="grey-text text-darken-3">{{ titulos.tit1 }}</h2>
+              <mat-radio-group formControlName="comportamentoInvestidor" [(ngModel)]="seuComportamento" required>
+                <mat-radio-button class="col l4" *ngFor="let comportamento of comportamentos" [value]="comportamento">
+                  {{ comportamento | uppercase }}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>  
+            <div class="divider"></div>
+            <div class="row">
+              <h2 class="grey-text text-darken-3">{{ titulos.tit2 }}</h2>
+              <mat-radio-group formControlName="prazoInvestimento" [(ngModel)]="seuTempoInvestimento" required>
+                <mat-radio-button class="col l4 s12" *ngFor="let prazo of prazoInvestimentos" [value]="prazo">{{ prazo | uppercase}}</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+              <h2 class="grey-text text-darken-3">{{ titulos.tit3 }}</h2>
+              <mat-radio-group formControlName="porcentagemInvestimento" [(ngModel)]="seuRetornoInvestimento" required>
+                <mat-radio-button class="col l4 s12" *ngFor="let porcentagem of porcentagemInvestimentos" [value]="porcentagem">{{ porcentagem | uppercase}}</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div class="divider"></div>
+
+            <h2 class="grey-text text-darken-3">Qual sua a familiaridade com os tipos de investimentos abaixo? <br>Leve em consideração o valor aplicado nos últimos 2 anos.</h2>
+              <div class="row">
+                
+                <div class="col l6 s12">
+                  <h3 >Fundos de investimento</h3>
+                    <mat-form-field formControlname="suaFamiliaridadeFundos"> 
+                      <mat-select placeholder="Selecione uma opção" [(ngModel)]="suaFamiliaridadeFundos" formControlName="familiaridadeFundosInvestimentos" required>
+                        <mat-option *ngFor="let familiaridade of familiaridadeFundosInvestimentos" [value]="familiaridade">{{ familiaridade }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                </div>
+                
+              <div class="col l6 s12">
+                  <h3>Ações a vista</h3>
+                  <mat-form-field formControlname="suaFamiliaridadeAcoes"> 
+                    <mat-select placeholder="Selecione uma opção" [(ngModel)]="suaFamiliaridadeAcoes" formControlName="familiaridadeAcoesInvestimentos" required>
+                      <mat-option *ngFor="let familiaridade of familiaridadeAcoesInvestimentos" [value]="familiaridade">{{ familiaridade }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+            
+              <div class="row">
+                  <div class="col l6 s12">
+                      <h3>Títulos de renda fixa ou tesouro direto</h3>
+                      <mat-form-field formControlname="suaFamiliaridadeRendaTesouro">   
+                        <mat-select placeholder="Selecione uma opção" [(ngModel)]="suaFamiliaridadeRendaTesouro" formControlName="familiaridadeRendaTesouroInvestimentos" required>
+                          <mat-option *ngFor="let familiaridade of familiaridadeRendaTesouroInvestimentos" [value]="familiaridade" required>{{ familiaridade }}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <!--<div *ngIf="formulario.controls['COLOCAR NAME'].hasErrors('required')"></div>-->
+                    </div>
+                  
+                    <div class="col l6 s12">
+                        <h3>Aluguel de Ações termos opções e futuros</h3>
+                        <mat-form-field formControlname="suaFamiliaridadeAluguel"> 
+                          <mat-select placeholder="Selecione uma opção" [(ngModel)]="suaFamiliaridadeAluguel" formControlName="familiaridadeAluguelInvestimentos" required>
+                            <mat-option class="seta" *ngFor="let familiaridade of familiaridadeAluguelInvestimentos" [value]="familiaridade">{{ familiaridade }}</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            
+            <br><br>
+            
+            
+            <button mat-raised-button>VOLTAR</button>
+          
+            <button mat-raised-button type="submit" [disabled]="formulario.invalid" [routerLink]="['/cadastrado', formulario.value]">SALVAR</button>
+              </form>
+    </div>
+  </div>

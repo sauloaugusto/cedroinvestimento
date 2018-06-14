@@ -1,0 +1,39 @@
+
+h2{ color: #BFB294; }
+
+.content-center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 5px;
+}
+
+p, h3{
+    color: #767473;
+}
+
+.mat-raised-button { 
+    border: 1px solid #640f2b;
+    margin: 0 10px;
+    color: #640f2b;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none!important;
+}
+
+button:focus, button:hover {
+    background-color: #640f2b;
+    color: #FFF;
+}
+
+
+
+

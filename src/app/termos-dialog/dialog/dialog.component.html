@@ -1,0 +1,56 @@
+
+<div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="col s11">
+              <h1 mat-dialog-title style="margin-left: 10px;">TERMO</h1>
+          </div>
+          <div class="col s1 right-align">
+            <button mat-icon-button color="warn" mat-dialog-close>
+                <mat-icon>close</mat-icon>
+              </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <mat-dialog-content>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a volutpat sapien. Vestibulum sit amet lorem et sem tincidunt tristique. Praesent semper tortor tempor, elementum nisi ac, mollis risus. <p>
+          </mat-dialog-content>
+        </div>
+        <div style="margin-top: 10px;">
+          <mat-checkbox #termo required>Li e aceito os termos e condições acima.</mat-checkbox>
+          <div class="divider"></div>
+        </div>
+        <div class="center-align">
+        <mat-dialog-actions>
+          <button mat-raised-button routerLink="/perfil-investidor" [disabled]="!termo.checked" mat-dialog-close>OK, ENTENDI</button>
+        </mat-dialog-actions>
+      </div>
+      </div>
+</div>
+
+
+<!--<div class="row">
+  
+  <div class="col s12 right-align" style="border:1px solid red;">
+    <button mat-icon-button color="warn" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12" class="center-align">
+  <h1 mat-dialog-title>TERMO</h1>
+  </div>
+  <div class="col s12">
+  <mat-dialog-content>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a volutpat sapien. Vestibulum sit amet lorem et sem tincidunt tristique. Praesent semper tortor tempor, elementum nisi ac, mollis risus. <p>
+  </mat-dialog-content>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-checkbox #termo required>Li e aceito os termos e condições acima.</mat-checkbox>
+  <mat-dialog-actions>
+    <button mat-button [disabled]="!termo.checked"  routerLink="/perfil-investidor">OK, ENTENDI</button>
+  </mat-dialog-actions>
+</div>-->

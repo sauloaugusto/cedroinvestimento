@@ -1,0 +1,45 @@
+h1, h3 { color: #640f2b }
+
+h2[_ngcontent-c1]{font-size: 1.1rem; font-weight: normal;}
+
+.mat-form-field {display: inline;}
+
+.content-center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 10vh;
+}
+
+.mat-raised-button { 
+    border: 1px solid #640f2b;
+    margin: 0 10px;
+    color: #640f2b;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none!important;
+}
+
+button:focus, button:hover {
+    background-color: #640f2b;
+    color: #FFF;
+}
+
+
+.divider {margin-bottom: 15px;}
+
+.row {padding: 10px 0;}
+
+
+/*.
+h2, h3 {padding-top: 1.2rem; color: #9e9e9e}
+h2[_ngcontent-c1]{font-size: 1.1rem; font-weight: normal;}
+*/
